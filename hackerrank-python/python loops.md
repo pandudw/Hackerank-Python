@@ -23,3 +23,11 @@ n = int(input())
 for i in range(n) :
     print(i**2)
   ```
+
+or you can use while 
+```python
+n = 1
+while n < 5:
+    print(n**2)
+    n += 1
+    ```
