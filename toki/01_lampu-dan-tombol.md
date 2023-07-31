@@ -54,5 +54,28 @@ def lamp_state(N):
 N = int(input("Masukan nilai:"))
 print(lamp_state(N))
 ```
-Untuk menyelesaikan ini sebenarnya hanya menggunakan kondisi if - else saja, dengan mengecek nilai N apakah genap atau ganjil. Apabila nilai N habis dibagi 2 maka N adalah genap dan apabila tidak habis dibagi 2 maka N adalah ganjil. Dalam menyelesaikan soal ini, saya menggunakan func lamp_state agar kode lebih terorganisir.  
+- Golang
+```golang
+package main
+
+import (
+	"fmt"
+)
+
+func lampState(N int) {
+	if N % 2 == 0 {
+		fmt.Println("Lampu mati")
+	} else {
+		fmt.Println("Lampu menyala")
+	}
+}
+
+func main() {
+	var N int
+	fmt.Printf("Masukkan nilai: ")
+	fmt.Scanf("%d", &N)
+	lampState(N)
+}
+```
+Untuk menyelesaikan ini sebenarnya hanya menggunakan kondisi if - else saja, dengan mengecek nilai N apakah genap atau ganjil. Apabila nilai N habis dibagi 2 maka N adalah genap dan apabila tidak habis dibagi 2 maka N adalah ganjil. Dalam menyelesaikan soal ini, saya menggunakan func lamp_state agar kode lebih terorganisir.
 
