@@ -5,9 +5,9 @@ Terdapat N tombol yang dinomori dari 1 hingga N dan sebuah lampu dalam keadaan
 mati. Apabila tombol ke-i ditekan, keadaan lampu akan berubah (dari mati menjadi
 menyala, atau sebaliknya) apabila N habis dibagi oleh i. Apabila masing-masing
 tombol ditekan tepat sekali, bagaimana keadaan lampu pada akhirnya?  
-## Format Masukan
+### Format Masukan
 Sebuah baris berisi sebuah bilangan, yaitu N.
-## Format Keluaran
+### Format Keluaran
 Sebuah baris berisi:  
 • "lampu mati", apabila keadaan akhir lampu adalah mati.  
 • "lampu menyala", apabila keadaan akhir lampu adalah menyala.   
@@ -23,7 +23,7 @@ Contoh Masukan 2
 
 Contoh Keluaran 2  
 > lampu menyala  
-## Analisis  
+## ANALISIS
 Ketika nilai N adalah genap, maka setiap tombol ditekan 2 kali yaitu pada saat i dan N/i.  
 Contoh N = 8 maka nilai i adalah 1, 2, 4, 8.  
 Posisi awal lampu: mati  
@@ -39,6 +39,20 @@ Posisi awal lampu: mati
 - saat menekan tombol ke-1 (i = 1) maka lampu akan menyala.
 - saat menekan tombol ke-3 (i = 3) maka lampu akan mati.
 - saat menekan tombol ke-9 (i = 9) maka lampu akan meyala.
-Sehingga saat N bernilai ganjil maka lampu menyala.  
+Sehingga saat N bernilai ganjil maka lampu menyala.
 
+## CODE IMPLEMENTATION  
+- Python
+```python
+def lamp_state(N):
+
+  if N % 2 == 0 :
+    print("Lampu mati")
+  else :
+    print("Lampu menyala")
+
+N = int(input("Masukan nilai:"))
+print(lamp_state(N))
+```
+Untuk menyelesaikan ini sebenarnya hanya menggunakan kondisi if - else saja, dengan mengecek nilai N apakah genap atau ganjil. Apabila nilai N habis dibagi 2 maka N adalah genap dan apabila tidak habis dibagi 2 maka N adalah ganjil. Dalam menyelesaikan soal ini, saya menggunakan func lamp_state agar kode lebih terorganisir.  
 
