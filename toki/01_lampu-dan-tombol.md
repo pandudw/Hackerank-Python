@@ -24,7 +24,7 @@ Contoh Masukan 2
 Contoh Keluaran 2  
 > lampu menyala  
 ## Analisis  
-Ketika nilai N adalah ganjil, maka setiap tombol ditekan 2 kali yaitu pada saat i dan N/i.  
+Ketika nilai N adalah genap, maka setiap tombol ditekan 2 kali yaitu pada saat i dan N/i.  
 Contoh N = 8 maka nilai i adalah 1, 2, 4, 8.  
 Posisi awal lampu: mati  
 - saat menekan tombol ke-1 (i = 1) maka lampu akan menyala.
