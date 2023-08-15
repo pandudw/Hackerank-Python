@@ -36,15 +36,16 @@ Untuk menentukan sebuah bilangan apakah palindrome dengan cara menbandingkan dig
 # CODE IMPLEMENTATION
 ```golang
 func isPalindrome(x int) bool {
-    x < 0 {
+    if x < 0 {
         return false
     }
+
     str := strconv.Itoa(x)
-    for i, j = 0, len(str)-1; i <=j; i,j = i+1, j-1 {
-        if str(i) != str(j) {
+    for i, j := 0, len(str)-1; i <= j; i, j = i+1, j-1 {
+        if str[i] != str[j] {
             return false
         }
-    return true
     }
+    return true
 }
 ```
