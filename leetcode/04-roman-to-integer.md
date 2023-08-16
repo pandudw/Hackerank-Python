@@ -24,8 +24,7 @@ X can be placed before L (50) and C (100) to make 40 and 90.
 C can be placed before D (500) and M (1000) to make 400 and 900.
 Given a roman numeral, convert it to an integer.
 
- 
-
+# INPUT AND OUTPUT FORMAT
 Example 1:
 ```
 Input: s = "III"   
@@ -55,3 +54,30 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 ```
 
 # ANALYSIS
+Pendekatan solusi di sini dengan mengiterasi setiap karakter dalam string angka romawi dan menambahkan nilainya sesuai dengan nilai numerik di setiap simbonya. saya menggunakan sebuah map untuk mapping (memetakan) angka romawi ke bilangan numeriknya. Selama proses iterasi, saya menambahkan nilai karakter ke variable 'sum'. Apabila nilai karakter sebelumnya lebih kecil dari nilai karakter saat ini, saya akan mengurangkan dua kali nilai karakter sebelumnya dari total sum.
+
+# CODE IMPLEMENTATION
+```GOLANG
+func romanToInt(s string) int {
+    romawi := map[rune] int {
+			'I' : 1,
+			'V' : 5,
+			'X' : 10,
+			'L' : 50,
+			'C' : 100,
+			'D' : 500,
+			'M' : 1000,
+		}
+		var sum int
+		var rmw rune
+
+		for _, tmp := range s {
+			sum += romawi[tmp]
+			if romawi[rmw] < romawi[tmp] {
+				sum -= romawi[rmw] * 2
+			}
+			rmw = tmp
+		}
+		return sum
+}
+```
