@@ -22,5 +22,12 @@ class Library:
         print("Book available in this library")
         for book in self.books:
             print(book)
+    
+    def find_book(self, title):
+        for book in self.books:
+            if book.title.lower() == title.lower():
+                print(f'Found: {book}')
+                return
+        print(f'Book with title "{title}" not found.')
 
 
